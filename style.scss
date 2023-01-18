@@ -12,95 +12,269 @@
 body{
     font-size: 62.5%;
 
+    &.dark{
+        background-color: rgb(255, 17, 17);
+        color: white;
+    }
+
 
     .container{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 2rem;
+        padding: 3rem;
         background: $Very-Dark-Blue-bg;
         // background-image: linear-gradient(hsl(37, 97%, 70%),hsl(329, 70%, 58%) );
 
+        .dashboard-one{
 
-        .dashboard-top{
-            display: flex;
-            justify-content: space-between;
+        
+            .dashboard-top{
+                display: flex;
+                justify-content: space-between;
 
-            .dashboard-top__text{
-                h2{
-                    font-size: 2rem;
-                    color: $White-Text;
+                .dashboard-top__text{
+                    h2{
+                        font-size: 2rem;
+                        color: $White-Text;
+                    }
+
+                    h4{
+                        color: $Dark-Grayish-Blue-Text;
+                        font-size: .9rem;
+                        letter-spacing: .1rem;
+                    }
                 }
 
-                h4{
-                    color: $Dark-Grayish-Blue-Text;
-                    font-size: .9rem;
-                    letter-spacing: .1rem;
+
+                .dashboard-top__toggle{
+
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+
+                    h3{
+                        color: $White-BG;
+                    }
+
+                    .checkbox{
+                        
+                    }
+                  
+                }
+            }
+
+
+            .dashboard-bottom{
+                .social-boxes{
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 2rem;
+                    margin-top: 2rem;
+                    text-align: start;
+
+                    .box{
+                        background-color: $Dark-Desaturated-Blue-Card-BG;
+                        padding: 3rem;
+                        cursor: pointer;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: .7rem;
+                        text-align: left;
+                        box-shadow: 2px 4px 8px 2px $Very-Dark-Blue-bg;
+                        transition: .5s all ease-in-out;
+
+
+                        &:hover{
+                            background-color:$Dark-Grayish-Blue-Text;
+                        }
+
+                        span{
+                            color: $Desaturated-Blue-Text-;
+                            font-weight: bold;
+                            font-size: .9rem;
+                            margin-left: 1rem;
+                            letter-spacing: .176rem;
+                        }
+
+                        .numbers{
+                            h3{
+                                font-size: 2.8rem;
+                                color: $White-Text;
+                                text-align: center;
+                            }
+
+                            span{
+                                text-align: left;
+                                font-size: .8rem;
+                                text-transform: uppercase;
+                                letter-spacing: .4rem;
+                            }
+                        }
+
+                        p{
+                            margin-top: 1rem;
+                            font-size: .9rem;
+                            align-items: center;
+                        }
+
+
+                        .green{
+                            color: $Lime-Green;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+                        .red{
+                            color: $Bright-Red;
+                            text-transform: uppercase;
+                            font-weight: 600;
+                        }
+                        &.facebook{
+                            border-top: 3px solid $Facebook;
+
+                            .fa-brands{
+                                font-size: 2rem;
+                                color: $Facebook;
+                            }
+                        }
+
+                        &.twitter{
+                            border-top: 3px solid $Twitter;
+
+                            .fa-brands{
+                                font-size: 2rem;
+                                color: $Twitter;
+                            }
+
+
+                        }
+
+                        &.instagram{
+                            border-radius: 1rem;
+                            border-block-start: 3px solid;
+                            border-image-source: linear-gradient(90deg,#fdc468,#df4996);
+                            border-image-slice: 1;
+                            
+
+
+                            .fa-brands{
+                                font-size: 2rem;
+                                background-color:linear-gradient(90deg,#fdc468,#df4996) ;
+                                background: -webkit-gradient(linear, left top, left bottom, from(#fdc468), to(#df4996)); -webkit-background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                            }
+                        }
+
+                        &.youtube{
+                            border-top: 3px solid $YouTube;
+
+                            .fa-brands{
+                                font-size: 2rem;
+                                color: $YouTube;
+                            }
+                        }
+                    }
                 }
             }
         }
+    }
 
 
-        .dashboard-bottom{
-            .social-boxes{
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 2rem;
-                margin-top: 2rem;
 
-                .box{
-                    background-color: $Dark-Desaturated-Blue-Card-BG;
-                    padding: 2rem;
-                    box-shadow: 2px 4px 8px 2px $Very-Dark-Blue-bg;
-                    // border-top: 2px solid $Very-Dark-Blue-bg ;
+    .dashboard-two{
+        // background-color: #df4996;
+        margin: 2rem 0;
 
-                    .fa-caret-up{
-                        color: $Lime-Green;
-                    }
-                    .fa-caret-down{
-                        color: $Bright-Red
-                    }
-                    &.facebook{
-                        border-top: 2px solid $Facebook;
+        h3{
+            color: $White-Text;
+            font-size: 1.8rem;
+            margin:0 0 2rem 0;
+        }
 
-                        .fa-brands{
-                            font-size: 2rem;
-                            color: $Facebook;
-                        }
-                    }
+        .overview-boxes{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
 
-                    &.twitter{
-                        border-top: 2px solid $Twitter;
+            .box{
+                background-color: $Dark-Desaturated-Blue-Card-BG;
+                border-radius: .5rem;
+                padding: 1.5rem;
+                display: flex;
+                cursor: pointer;
+                transition: .5s all ease-in-out;
+                justify-content: space-between;
 
-                        .fa-brands{
-                            font-size: 2rem;
-                            color: $Twitter;
-                        }
-                    }
+                &:hover{
+                    background-color:$Dark-Grayish-Blue-Text;
+                }
 
-                    &.instagram{
-                        border-block-start: 2px solid;
-                        border-image-source: linear-gradient(90deg,#fdc468,#df4996);
-                        border-image-slice: 1;
-
-
-                        .fa-brands{
-                            font-size: 2rem;
-                            background-color:linear-gradient(90deg,#fdc468,#df4996) ;
-                            background: -webkit-gradient(linear, left top, left bottom, from(#fdc468), to(#df4996)); -webkit-background-clip: text;
-                            -webkit-text-fill-color: transparent;
-                        }
-                    }
-
-                    &.youtube{
-                        border-top: 2px solid $YouTube;
-                    }
-
-                    .fa-caret-up{
-                        color: $Lime-Green;
+                .analytics{
+                    p{
+                        font-size: .9rem;
+                        color: $Desaturated-Blue-Text-;
+                        font-weight: 600;
+                        margin: 0 0 1rem 0;
                     }
                 }
+
+
+                .number{
+
+                    
+                    .green{
+                        color: $Lime-Green;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: .8rem;
+                        letter-spacing: 2px;
+                    }
+                    .red{
+                        color: $Bright-Red;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: .9rem;
+                        letter-spacing: 2px;
+                    }
+
+
+                    .fa-brands{
+                        margin: 0 0 1rem 0;
+                    }
+                    .fa-square-facebook{
+                        font-size: 1.5rem;
+                        color: $Facebook;
+                    }
+
+                    .fa-twitter{
+                        font-size: 1.5rem;
+                        color: $Twitter;
+                    }
+
+
+                    .fa-instagram{
+                        font-size: 1.5rem;
+                        background-color:linear-gradient(90deg,#fdc468,#df4996) ;
+                        background: -webkit-gradient(linear, left top, left bottom, from(#fdc468), to(#df4996)); 
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+
+                    .fa-youtube{
+                        font-size: 1.5rem;
+                        color: $YouTube;
+                    }
+
+                }
+            }
+
+            span{
+                color: $White-BG;
+                font-size: 1.6rem;
+                font-weight: 600;
             }
         }
     }
