@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;0,900;1,700&display=swap');
+@import 'config';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+
+body{
+    font-size: 62.5%;
+
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        background: $Very-Dark-Blue-bg;
+        // background-image: linear-gradient(hsl(37, 97%, 70%),hsl(329, 70%, 58%) );
+
+
+        .dashboard-top{
+            display: flex;
+            justify-content: space-between;
+
+            .dashboard-top__text{
+                h2{
+                    font-size: 2rem;
+                    color: $White-Text;
+                }
+
+                h4{
+                    color: $Dark-Grayish-Blue-Text;
+                    font-size: .9rem;
+                    letter-spacing: .1rem;
+                }
+            }
+        }
+
+
+        .dashboard-bottom{
+            .social-boxes{
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 2rem;
+                margin-top: 2rem;
+
+                .box{
+                    background-color: $Dark-Desaturated-Blue-Card-BG;
+                    padding: 2rem;
+                    box-shadow: 2px 4px 8px 2px $Very-Dark-Blue-bg;
+                    // border-top: 2px solid $Very-Dark-Blue-bg ;
+
+                    .fa-caret-up{
+                        color: $Lime-Green;
+                    }
+                    .fa-caret-down{
+                        color: $Bright-Red
+                    }
+                    &.facebook{
+                        border-top: 2px solid $Facebook;
+
+                        .fa-brands{
+                            font-size: 2rem;
+                            color: $Facebook;
+                        }
+                    }
+
+                    &.twitter{
+                        border-top: 2px solid $Twitter;
+
+                        .fa-brands{
+                            font-size: 2rem;
+                            color: $Twitter;
+                        }
+                    }
+
+                    &.instagram{
+                        border-block-start: 2px solid;
+                        border-image-source: linear-gradient(90deg,#fdc468,#df4996);
+                        border-image-slice: 1;
+
+
+                        .fa-brands{
+                            font-size: 2rem;
+                            background-color:linear-gradient(90deg,#fdc468,#df4996) ;
+                            background: -webkit-gradient(linear, left top, left bottom, from(#fdc468), to(#df4996)); -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+
+                    &.youtube{
+                        border-top: 2px solid $YouTube;
+                    }
+
+                    .fa-caret-up{
+                        color: $Lime-Green;
+                    }
+                }
+            }
+        }
+    }
+}
