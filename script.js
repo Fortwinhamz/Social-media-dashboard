@@ -1,4 +1,14 @@
-function myFunction() {
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-}
+// Failed Script
+
+// function myFunction() {
+//     var element = document.body;
+//     element.classList.toggle("dark-mode");
+// }
+
+
+const checkbox = document.getElementById('checkbox');
+
+checkbox.addEventListener('change', ()=>{
+//   document.body.classList.toggle('dark');
+alert('Hello World')
+})
