@@ -141,7 +141,9 @@ body{
                     gap: 1rem;
 
                     h3{
-                        color: $White-BG;
+                        font-size: 1.5rem;
+                        color: $Dark-Grayish-Blue-Text;
+                        margin-top: 1rem;
                     }
 
                     .checkbox{
@@ -163,6 +165,7 @@ body{
                         height: 1.5rem;
                         background: $dark-mode-toggle;
                         display: flex;
+                        margin-top: .7rem;
                         border-radius: 50px;
                         align-items: center;
                         justify-content: space-between;
