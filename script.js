@@ -9,6 +9,6 @@
 const checkbox = document.getElementById('checkbox');
 
 checkbox.addEventListener('change', ()=>{
-//   document.body.classList.toggle('dark');
-alert('Hello World')
+  document.body.classList.toggle('dark');
+
 })
