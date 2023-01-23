@@ -83,9 +83,10 @@ body{
                                     border-radius: .7rem;
                                     box-sizing: border-box;
                                     z-index: -1;
+                                    transition: .5s all ease-in-out;
                                 }
 
-                                &:hover{
+                                &:hover::before{
                                     background-color: $Light-Grayish-Blue-Card-BG;
                                 }
     
