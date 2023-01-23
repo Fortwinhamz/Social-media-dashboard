@@ -47,6 +47,52 @@ body{
                                 color: $Very-Dark-Blue-Text;
                             }
 
+                            &.instagram{
+    
+    
+                                // Delete when it's not working
+    
+                                position: relative;
+                                // display:inline-block;
+                                background-image: linear-gradient(90deg, #fdc468, #df4996);
+                                text-align: center;
+                                // color: #0075fa;
+                                border-radius: .7rem;
+                                font-weight: 600;
+                                z-index:0;
+
+
+                                &:hover{
+                                    background-color: $Light-Grayish-Blue-Card-BG;
+                                }
+
+
+                                
+    
+    
+                                &::before{
+                                    content: '';
+                                    position: absolute;
+                                    /* specify the value of border width here */
+                                    top: 3px;
+                                    right: 0px;
+                                    bottom:0px;
+                                    left:0px;
+                                    /* --- */
+                                    background-color: $White-BG;
+                                    border-radius: .7rem;
+                                    box-sizing: border-box;
+                                    z-index: -1;
+                                }
+
+                                &:hover{
+                                    background-color: $Light-Grayish-Blue-Card-BG;
+                                }
+    
+    
+                                // Stop Delete
+    
+                            }
                             .numbers{
                                 h3{
                                    color: $Very-Dark-Blue-Text; 
@@ -276,12 +322,45 @@ body{
                         }
 
                         &.instagram{
-                            border-radius: 1rem;
-                            border-block-start: 3px solid;
-                            border-image-source: linear-gradient(90deg,#fdc468,#df4996);
-                            border-image-slice: 1;
+                            // border-radius: 1rem;
+                            // border-block-start: 3px solid;
+                            // border-image-source: linear-gradient(90deg,#fdc468,#df4996);
+                            // border-image-slice: 1;
+                            // border-start-end-radius: 80px 80px;
+
+
+                            // Delete when it's not working
+
+                            position: relative;
+                            // display:inline-block;
+                            background-image: linear-gradient(90deg, #fdc468, #df4996);
+                            text-align: center;
+                            color: #485564;
+                            border-radius: .7rem;
+                            overflow: hidden;
+                            // font-size: 14px;
+                            font-weight: 600;
+                            z-index:0;
+
+
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                /* specify the value of border width here */
+                                top: 3px;
+                                right: 0px;
+                                bottom:0px;
+                                left:0px;
+                                /* --- */
+                                background-color: $Dark-Desaturated-Blue-Card-BG;
+                                border-radius: .7rem;
+                                box-sizing: border-box;
+                                z-index: -1;
+                            }
                             
 
+
+                            // Stop Delete
 
                             .fa-brands{
                                 font-size: 2rem;
@@ -635,3 +714,36 @@ body{
         }
     }
 }
+
+
+
+
+.card-approve-btn {
+    position: relative;
+    display:inline-block;
+    background-image: linear-gradient(291deg, #ffb37c, #f9514f);
+    padding:5rem;
+    line-height:30px;
+    text-align: center;
+    color: #485564;
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 600;
+    z-index:0;
+  }
+  
+  .card-approve-btn:before {
+    content: '';
+    position: absolute;
+    /* specify the value of border width here */
+    top: 4px;
+    right: 4px;
+    bottom: 4px;
+    left: 4px;
+    /* --- */
+    background-color: #fff;
+    border-radius: 5px;
+    box-sizing: border-box;
+    z-index: -1;
+  }
