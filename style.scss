@@ -196,9 +196,11 @@ body{
                     .checkbox{
                         opacity: 0;
                         position: absolute;
+                        cursor: pointer;
                         &:checked + .label{
                             .ball{
                                 transform: translateX(24px);
+                                cursor: pointer;
                             }
 
                             // .label{
@@ -218,6 +220,7 @@ body{
                         justify-content: space-between;
                         padding: 5px;
                         position: relative;
+                        cursor: pointer;
                         transform: scale(1.5);
 
                         .ball{
@@ -228,6 +231,7 @@ body{
                             top: 2px;
                             left: 2px;
                             border-radius: 50%;
+                            cursor: pointer;
                             transition: transform 0.2s linear;
                         }
                     }
